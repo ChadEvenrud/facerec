@@ -1,3 +1,16 @@
+const myList = ['chad', 'bree', 'magnolia', 'tanner', 'max', 'murphy']
+const myObj = {
+  city: "la mesa",
+  state: "CA",
+    people: ["chad", "bree", "magnolia", "tanner", "max", "murphy"],
+    lastName: 'evenrud',
+    addName : function () { 
+        
+    }
+};
+
+
+
 async function fetchUsers() {
     try {
         const response = await fetch(
