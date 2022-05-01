@@ -1,15 +1,11 @@
-const myList = ['chad', 'bree', 'magnolia', 'tanner', 'max', 'murphy']
+const myList = ["chad", "bree", "magnolia", "tanner", "max", "murphy"];
 const myObj = {
-  city: "la mesa",
-  state: "CA",
+    city: "la mesa",
+    state: "CA",
     people: ["chad", "bree", "magnolia", "tanner", "max", "murphy"],
-    lastName: 'evenrud',
-    addName : function () { 
-        
-    }
+    lastName: "evenrud",
+    addName: function() {},
 };
-
-
 
 async function fetchUsers() {
     try {
@@ -28,3 +24,17 @@ async function fetchUsers() {
 
 const jsonPromise = fetchUsers();
 const users = jsonPromise.then((items) => items.map((item) => item.name));
+
+const oddishOrEvenish = (number) => {
+    const numbers = [...String(number)].reduce(
+        (acc, number) => acc + Number(number),
+        0
+    );
+    if (numbers % 2 === 0) {
+        return `Evenish`;
+    } else {
+        return `Oddish`;
+    }
+};
+
+console.log(oddishOrEvenish(332));
